@@ -5,16 +5,13 @@
     <c:param name="content">
         <c:choose>
             <c:when test="${tasks != null}">
-                <h2>id : ${tasks.id} のメッセージ詳細ページ</h2>
+                <h2>id : ${tasks.id} のタスク詳細ページ</h2>
 
                 <<table>
                     <tbody>
                         <tr>
-                            <th>タイトル</th>
-                            <td><c:out value="${tasks.title}" /></td>
-                        </tr>
-                        <tr>
-                            <th>メッセージ</th>
+
+                            <th>タスク</th>
                             <td><c:out value="${tasks.content}" /></td>
                         </tr>
                         <tr>
@@ -29,7 +26,7 @@
                 </table>
 
                 <p><a href="${pageContext.request.contextPath}/index">一覧に戻る</a></p>
-                <p><a href="${pageContext.request.contextPath}/edit?id=${tasks.id}">このメッセージを編集する</a></p>
+                <p><a href="${pageContext.request.contextPath}/edit?id=${tasks.id}">このタスクを編集する</a></p>
             </c:when>
             <c:otherwise>
                 <h2>お探しのデータは見つかりませんでした。</h2>

@@ -32,8 +32,7 @@ public class tasks {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "title", length = 255, nullable = false)
-    private String title;
+
 
     @Column(name = "content", length = 255, nullable = false)
     private String content;
@@ -52,13 +51,7 @@ public class tasks {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
-    }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
 
     public String getContent() {
         return content;
